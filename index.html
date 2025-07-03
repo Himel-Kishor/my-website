@@ -1,211 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himel Kishor Barua - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #D04D82;
-      --secondary-color: #5B2C6F;
-      --text-color: #333;
-      --background-color: #fff;
-    }
-    * {
-      margin: 0; padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-color);
-      background: var(--background-color);
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 100;
-    }
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: var(--primary-color);
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero img {
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 4px solid var(--primary-color);
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero h2 {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      max-width: 600px;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      background: var(--primary-color);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: var(--secondary-color);
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h3 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-    ul, .skills-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    li, .skills-list span {
-      margin-bottom: 0.5rem;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .skills-list span {
-      background: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 100%;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="logo"><strong>HKB</strong></div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center p-4">
+      <h1 class="text-5xl font-bold mb-4">Your Name</h1>
+      <p class="text-xl mb-6">I’m a web developer and designer.</p>
+      <a
+        href="#projects"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition"
+        >See My Work</a
+      >
+    </section>
 
-  <section class="hero" id="home">
-    <img src="https://i.postimg.cc/9fzrxwFP/Photo-Himel-Kishor-Barua.jpg" alt="Himel Kishor Barua profile picture">
-    <h1>Himel Kishor Barua</h1>
-    <h2>Industrial and Production Engineering Professional</h2>
-    <p>Driving process excellence, supply chain strategy, and manufacturing optimization at one of Bangladesh’s largest conglomerates.</p>
-    <a class="btn" href="#contact">Contact Me</a>
-  </section>
+    <!-- About Section -->
+    <section class="py-16 px-4 max-w-4xl mx-auto" id="about">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-300 mb-4">
+        Short bio goes here. Add your skills, your interests, or your experience.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-4">
+        <span class="bg-gray-800 px-4 py-2 rounded">HTML</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">CSS</span>
+        <span class="bg-gray-800 px-4 py-2 rounded">JavaScript</span>
+      </div>
+    </section>
 
-  <section id="about">
-    <h3>About Me</h3>
-    <p>Himel Kishor Barua is an accomplished industrial and production engineering professional, currently serving as an Assistant Manager at Pran-RFL Group, one of Bangladesh’s largest conglomerates. A graduate of Shahjalal University of Science and Technology (SUST) with a degree in Industrial and Production Engineering, Himel has also completed a Post Graduate Diploma in Supply Chain Management (PGDSCM), further strengthening his expertise in operational excellence and strategic supply chain practices.</p>
-    <p>Himel is passionate about applying innovative engineering solutions to real-world challenges, continuously pursuing opportunities to improve efficiency and add value within the manufacturing sector.</p>
-    <h4>Education</h4>
-    <ul>
-      <li>M.Sc. Industrial and Production Engineering, SUST, 2024</li>
-      <li>B.Sc.(Engg.) Industrial and Production Engineering, SUST, 2023</li>
-      <li>Post Graduate Diploma in Supply Chain Management (PGDSCM)</li>
-    </ul>
-  </section>
+    <!-- Projects Section -->
+    <section class="py-16 px-4 bg-gray-900" id="projects">
+      <h2 class="text-3xl font-bold mb-8 text-center">My Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Example Project -->
+        <div class="bg-gray-800 rounded-xl p-4 hover:scale-105 transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project 1" class="rounded mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Project Title</h3>
+          <p class="text-gray-400">Short description of the project.</p>
+        </div>
+        <!-- More projects can go here -->
+      </div>
+    </section>
 
-  <section id="experience">
-    <h3>Experience</h3>
-    <ul>
-      <li>
-        <strong>Assistant Manager, Production Department</strong> <br/>
-        Pran-RFL Group (July 2024 - Present)
-        <p>Responsible for driving process improvements, enhancing productivity, and supporting sustainable growth initiatives.</p>
-      </li>
-    </ul>
-  </section>
+    <!-- Contact Section -->
+    <section class="py-16 px-4 max-w-4xl mx-auto" id="contact">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <form class="flex flex-col gap-4 mt-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+        />
+        <textarea
+          placeholder="Your Message"
+          class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl transition"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
 
-  <section id="skills">
-    <h3>Skills</h3>
-    <div class="skills-list">
-      <span>Data Analysis</span>
-      <span>Problem-Solving</span>
-      <span>Process Optimization</span>
-      <span>Strategic Thinking</span>
-      <span>Requirements Gathering</span>
-      <span>Reporting & Visualization</span>
-      <span>Cross-functional Collaboration</span>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>You can reach me via the following:</p>
-    <ul>
-      <li>Email: <a href="mailto:himel.k.b324@gmail.com">himel.k.b324@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/himel-kishor-barua-4598422a7/" target="_blank">Himel Kishor Barua</a></li>
-    </ul>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button class="btn" type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 Himel Kishor Barua. All rights reserved.
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="text-center py-8 bg-gray-950 border-t border-gray-800">
+      &copy; 2025 Your Name. All rights reserved.
+    </footer>
+  </body>
 </html>
